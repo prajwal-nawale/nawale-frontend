@@ -25,7 +25,7 @@ function App() {
     setLoading(true)
 
     try {
-      const res = await axios.post('https://nawale-backend.onrender.com/chat', {
+      const res = await axios.post('https://api.nawale.in/chat', {
         question
       })
       const botMessage: Message = { role: 'bot', content: res.data.answer }
@@ -56,7 +56,7 @@ function App() {
           Building intelligent systems with LangChain, LangGraph, RAG pipelines, and modern web tech.
         </p>
         <div className="flex gap-4 justify-center mt-6">
-          <a href="https://github.com/yourusername" target="_blank"
+          <a href="https://github.com/prajwal-nawale" target="_blank"
             className="border border-orange-500 text-orange-500 px-6 py-2 rounded hover:bg-orange-500 hover:text-black transition">
             GitHub
           </a>
