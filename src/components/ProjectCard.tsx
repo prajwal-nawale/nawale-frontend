@@ -14,24 +14,25 @@ function ProjectCard({ project }: any) {
         <span className="ml-2">{project.date}</span>
       </div>
 
-      {/* Image */}
-      {!expanded && (
+      {/* Image — only when collapsed */}
+      {!expanded && project.image && (
         <div className="border-b-2 border-black">
           <img
             src={project.image}
-            className="w-full h-40 object-cover grayscale"
+            alt={project.title}
+            className="w-full h-36 md:h-40 object-cover grayscale"
           />
         </div>
       )}
 
       {/* Content */}
-      <div className="p-5 flex flex-col gap-4">
+      <div className="p-4 md:p-5 flex flex-col gap-3 md:gap-4">
 
-        <h3 className="font-bold text-lg">{project.title}</h3>
+        <h3 className="font-bold text-base md:text-lg">{project.title}</h3>
 
         {!expanded ? (
           <>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 line-clamp-3">
               {project.description}
             </p>
 
@@ -44,16 +45,13 @@ function ProjectCard({ project }: any) {
           </>
         ) : (
           <>
-            {/* Bullet points */}
             <ul className="text-sm flex flex-col gap-2 list-disc pl-5">
               {project.points.map((point: string, i: number) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
 
-            {/* Actions */}
-            <div className="flex gap-4 mt-2">
-
+            <div className="flex gap-4 mt-2 flex-wrap">
               <a
                 href={project.link}
                 target="_blank"
@@ -68,7 +66,6 @@ function ProjectCard({ project }: any) {
               >
                 Collapse
               </button>
-
             </div>
           </>
         )}

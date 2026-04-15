@@ -2,25 +2,21 @@ import { quickLinks } from '../data'
 
 function QuickLinks() {
   return (
-    <section className="max-w-5xl mx-auto px-10 pt-16 border-t-2 border-black relative">
+    <section className="max-w-5xl mx-auto px-6 border-t-2 border-black">
 
-      {/* Label */}
-      <h3 className="text-sm font-medium mb-6 relative -top-28 ">Quick links</h3>
+      <p className="text-xs font-medium py-3 text-gray-500">Quick links</p>
 
-      {/* Box row (OVERLAPPING LINE) */}
-      <div className="grid grid-cols-4 relative -top-33 bg-white">
-
+      <div className="grid grid-cols-2 md:grid-cols-4 border-l-2 border-black">
         {quickLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
-            className="border-2 border-black px-6 py-4 flex justify-between items-center text-sm font-medium bg-gray-400 hover:bg-black hover:text-white transition"
+            className="border-r-2 border-b-2 border-black px-4 py-3 flex justify-between items-center text-sm font-medium bg-gray-400 hover:bg-black hover:text-white transition"
           >
-            {link.label}
-            <span>↗</span>
+            <span className="truncate mr-1">{link.label}</span>
+            <span className="flex-shrink-0">↗</span>
           </a>
         ))}
-
       </div>
 
     </section>
