@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'AI Resume Chatbot',
     description: 'Context-aware AI chatbot that answers questions about my resume using Retrieval-Augmented Generation (RAG) and semantic search.',
     image: '',
-    link: 'https://api.nawale.in',
+    link: 'https://nawale.in/#chatbot',
     date: '2026-04-10',
     tags: ['Python', 'Flask', 'LlamaIndex', 'RAG', 'OpenRouter'],
     points: [
