@@ -7,7 +7,7 @@ function Hero() {
         {/* Image — top on mobile, right on desktop */}
         <div className="w-40 h-40 md:w-64 md:h-64 border-2 border-black shadow-[6px_6px_0px_black] overflow-hidden self-start md:order-2 flex-shrink-0">
           <img
-            src="/pic.jpeg"
+            src="/pic.jpg"
             alt="Prajwal Nawale"
             className="w-full h-full object-cover object-top"
           />
